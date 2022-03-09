@@ -130,3 +130,46 @@ header .menu ul li {
     color: var(--branco);
     font-weight: 700;
 }
+
+main {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-corpo);
+}
+
+main .conteudo {
+    color: var(--branco);
+    padding: 30px 30px;
+}
+
+main .conteudo h2 {
+    font-family: var(--font-destaque);
+    font-size: 2.1rem;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+}
+
+main .conteudo h2 span {
+    color: var(--vermelho);
+    font-weight: 700;
+}
+
+main .conteudo p {
+    line-height: 22px;
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-bottom: 60px;
+}
+
+main .conteudo .botao {
+    background: var(--branco);
+    color: var(--azul-claro);
+    padding: 15px 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 4px;
+}
