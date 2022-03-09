@@ -1,0 +1,132 @@
+@font-face {
+    font-family: 'Pepsi';
+    src: url(../font/PEPSI_pl.ttf);
+}
+
+:root {
+    --branco: #f2f2f2;
+    --azul: #004B93;
+    --azul-claro: #005CB4;
+    --vermelho: #C9002B;
+    --preto: #131111;
+
+    --font-destaque: 'Pepsi';
+    --font-corpo: 'Ubuntu', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--azul-claro);
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo-pepsi {
+    width: 90px;
+}
+
+header .menu-botao {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: transparent;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1000;
+    transition: 0.5;
+}
+
+header .menu-botao span {
+    position: absolute;
+    width: 45px;
+    height: 5px;
+    border-radius: 10px;
+    background: var(--branco);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
+    transition: 0.5s;
+}
+
+header .menu-botao span:nth-child(1) {
+    transform: translateY(-15px);
+    width: 35px;
+    right: 7px;
+}
+
+header .menu-botao span:nth-child(2) {
+    transform: translateY(15px);
+    width: 25px;
+    right: 7px;
+}
+
+header .menu-botao.aberto span:nth-child(1) {
+    transform: translateY(0) rotate(45deg);
+    left: 5px;
+    width: 50px;
+    transition: 0.5s;
+}
+
+header .menu-botao.aberto span:nth-child(2) {
+    transform: translateY(0) rotate(315deg);
+    left: 5px;
+    width: 50px;
+    transition: 0.5s;
+}
+
+header .menu-botao.aberto span:nth-child(3) {
+    transform: translateX(-60px);
+}
+
+header .menu {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    background: var(--azul-claro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-100vw);
+    transition: 0.5s;
+}
+
+header .menu.aberto {
+    transform: translateX(0);
+    transition-delay: 0.125s;
+}
+
+header .menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header .menu ul li {
+    font-family: var(--font-corpo);
+    text-transform: uppercase;
+    font-size: 2rem;
+    line-height: 110px;
+    color: var(--branco);
+    font-weight: 700;
+}
