@@ -135,6 +135,7 @@ main {
     min-height: 100vh;
     position: relative;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     font-family: var(--font-corpo);
@@ -143,6 +144,11 @@ main {
 main .conteudo {
     color: var(--branco);
     padding: 30px 30px;
+    min-height: 90vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
 }
 
 main .conteudo h2 {
@@ -172,4 +178,19 @@ main .conteudo .botao {
     font-weight: 700;
     font-size: 1.1rem;
     border-radius: 4px;
+}
+
+main .slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: 80vh;
+}
+
+main .slider .slides {
+    position: absolute;
+    width: 600px;
+    top: -150px;
 }
