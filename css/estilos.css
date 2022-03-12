@@ -132,23 +132,23 @@ header .menu ul li {
 }
 
 main {
-    min-height: 100vh;
     position: relative;
+    width: 100%;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     font-family: var(--font-corpo);
+    min-height: 150vh;
 }
 
 main .conteudo {
-    color: var(--branco);
-    padding: 30px 30px;
-    min-height: 90vh;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    position: relative;
+    width: 100%;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--branco);
+    flex-direction: column;
 }
 
 main .conteudo h2 {
@@ -181,16 +181,13 @@ main .conteudo .botao {
 }
 
 main .slider {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     position: relative;
-    min-height: 80vh;
 }
 
 main .slider .slides {
-    position: absolute;
-    width: 600px;
-    top: -150px;
+    display: none;
+}
+
+main .slider .slides.ativo {
+    display: block;
 }
