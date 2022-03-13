@@ -151,26 +151,30 @@ main .conteudo {
     flex-direction: column;
 }
 
-main .conteudo h2 {
+main .conteudo .texto {
+    padding: 30px 30px;
+}
+
+main .conteudo .texto h2 {
     font-family: var(--font-destaque);
     font-size: 2.1rem;
     margin-bottom: 35px;
     text-transform: uppercase;
 }
 
-main .conteudo h2 span {
+main .conteudo .texto h2 span {
     color: var(--vermelho);
     font-weight: 700;
 }
 
-main .conteudo p {
+main .conteudo .texto p {
     line-height: 22px;
     font-weight: 500;
     font-size: 1.2rem;
     margin-bottom: 60px;
 }
 
-main .conteudo .botao {
+main .conteudo .texto .botao {
     background: var(--branco);
     color: var(--azul-claro);
     padding: 15px 20px;
